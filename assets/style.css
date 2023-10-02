@@ -1,0 +1,85 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: aqua;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.calculator {
+  background-color: #3a4452;
+  border-radius: 20px;
+  padding: 20px;
+}
+
+.heading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all ease;
+  animation: bounce infinite 3s;
+}
+
+.heading h2 {
+  padding: 10px;
+  font-size: 2.5rem;
+  background: linear-gradient(to bottom right, #ff0000, #ffc0cb);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.calculator form input {
+  width: 60px;
+  height: 60px;
+  outline: none;
+  border: 0;
+  border-radius: 10px;
+  margin: 10px;
+  cursor: pointer;
+  background: transparent;
+  color: white;
+  font-size: 20px;
+  box-shadow: 0 0 5px 0 white;
+}
+.calculator form .display-2 {
+  width: 140px;
+}
+
+form .display {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0;
+}
+
+form .display input {
+  text-align: right;
+  flex: 1;
+  font-size: 40px;
+  padding-right: 10px;
+  padding-left: 10px;
+}
+
+input[type="button"]:hover {
+  transform: scale(0.9);
+  transition: all 0.3s ease;
+}
